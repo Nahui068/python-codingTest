@@ -1,6 +1,9 @@
+import time
+
 n,k = map(int,input().split())
 count = 0
 
+start_time = time.time()
 while True:
   if(n%k==0):
     n = n//k
@@ -9,5 +12,7 @@ while True:
   if(n%k!=0):
     n -= 1
     count+=1
+end_time = time.time()
 print(count)
+print('성능측정:',end_time-start_time)
 
